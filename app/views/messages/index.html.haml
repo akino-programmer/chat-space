@@ -1,0 +1,38 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title
+    %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.0.13/css/all.css", :integrity => "sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp", :rel => "stylesheet"}/
+  %body
+    .chat-wrapper
+      .group__created グループを作成しました
+      = render 'shared/side_bar'
+      .chat__body
+        .group__top
+          %h3 sample
+          =link_to "/form.php" do
+            .group__top__edit-btn Edit
+          %p1 Members: seo neko
+        .chat__posted
+          .chat__posted__top
+            .chat__posted__top__user
+              %p.message__user test-user
+              %p.message__date 2019/08/14(Wed) 17:00:00
+            %p.chat__message こんにちは！
+          .chat__middle
+            .chat__posted__top__user
+              %p.message__user test-user
+              %p.message__date 2019/08/14(Wed) 17:00:00
+            %p.chat__message こんにちは！!
+        .form
+          %form#create__message.create__message{:action => "/form.php", :method => "post"}
+            .input__box
+              %input#message__content.input__box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+              %label.input__box__image{:for => "message_image"}
+                %button.image__button{:type => "submit"}
+                  =link_to "/form.php", class: "my-black" do
+                    = icon("far", "image")
+                %input#message__image.input__box__image__file{:name => "message[image]", :type => "file"}/
+            %input.submit__btn{:name => "commit", :type => "submit", :value => "Send"}/

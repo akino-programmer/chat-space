@@ -1,0 +1,21 @@
+@mixin flex {
+  display: flex;
+}
+@mixin message_user {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 46px 0px 10px 40px;
+  color: $maingrayColor;
+}
+@mixin message_date {
+  font-size: 12px;
+  color: $subgrayColor;
+  padding: 46px 0px 10px 10px;
+  font-weight: normal;
+}
+@mixin chat_message {
+  font-size: 14px;
+  color: $maingrayColor;
+  padding: 0px 0px 0px 40px;
+  font-weight: normal;
+}
