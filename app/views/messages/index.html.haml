@@ -10,7 +10,7 @@
       .chat__body
         .group__top
           %h3 sample
-          =link_to "/form.#undefined" do
+          =link_to "/form.#" do
             .group__top__edit-btn Edit
           %p1 Members: seo neko
         .chat__posted
@@ -25,12 +25,12 @@
               %p.message__date 2019/08/14(Wed) 17:00:00
             %p.chat__message こんにちは！!
         .form
-          %form#create__message.create__message{:action => "/form.#undefined", :method => "post"}
+          %form#create__message.create__message{:action => "/form.#", :method => "post"}
             .input__box
               %input#message__content.input__box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
               %label.input__box__image{:for => "message_image"}
                 %button.image__button{:type => "submit"}
-                  =link_to "/form.#undefined", class: "my-black" do
+                  =link_to "/form.#", class: "my-black" do
                     = icon("far", "image")
                 %input#message__image.input__box__image__file{:name => "message[image]", :type => "file"}/
             %input.submit__btn{:name => "commit", :type => "submit", :value => "Send"}/
