@@ -1,15 +1,20 @@
 .side__bar
   .side__top
     .side__top__box
-      %p.side__top__box__user__name test
+      %p.side__top__box__user__name
+        = current_user.name
       %ul.side__top__box__menu
         %li.side__top__box__menu__new-group
-          =link_to "/form.#", class: "my-white" do
+          =link_to new_group_path, class: "my-white" do
             = fa_icon "edit"
         %li.side__top__box__menu__edit-user
-          =link_to "/form.#", class: "my-white" do
+          =link_to edit_user_path(current_user), class: "my-white" do
             = fa_icon "cog"
-  .side__members
-    .side__members__middle
-      %h2 sample
-      %p aaaaa
+  .groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。

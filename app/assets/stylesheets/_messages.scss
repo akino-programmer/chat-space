@@ -1,4 +1,4 @@
-.chat-wrapper {
+.wrapper {
   color: $mainBlackColor;
   background: $subWhiteColor;
 }
@@ -9,11 +9,14 @@
   text-align: center;
 }
   
+
 .side__bar{
   width: 300px;
   background-color: #2f3e51;
   height: 100vh;  
   float: left;
+  box-sizing: border-box;
+  color: $mainWhiteColor;
 }
 
 
@@ -49,17 +52,18 @@
 .my-white {color: $subWhiteColor}
 .my-black {color: $mainBlackColor}
 
-.side__members{
+.groups{
   height: calc(100vh - 100px);
-    &__middle{
+  color: $mainWhiteColor;
+     .group{
        height: 100px;
-          h2{
+       &__name{
            font-size: 15px;
            font-weight: bold;
            color: $subWhiteColor;
            padding: 20px 0px 5px 20px;
           }
-          p{
+          &__message{
            font-size: 11px;
            font-weight: bold;
            color: $subWhiteColor;
@@ -90,7 +94,6 @@
       top: 28px;
       line-height: 40px;
       padding: 0px 20px;
-      margin-top: 28px;
       border: solid 1px $mainBlueColor;
       position: absolute;
       right: 40px;
