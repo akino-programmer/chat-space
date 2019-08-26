@@ -13,24 +13,12 @@
           =link_to "/form.#" do
             .group__top__edit-btn Edit
           %p1 Members: seo neko
-        .chat__posted
-          .chat__posted__top
-            .chat__posted__top__user
-              %p.message__user test-user
-              %p.message__date 2019/08/14(Wed) 17:00:00
-            %p.chat__message こんにちは！
-          .chat__middle
-            .chat__posted__top__user
-              %p.message__user test-user
-              %p.message__date 2019/08/14(Wed) 17:00:00
-            %p.chat__message こんにちは！!
+        = render @messages
         .form
-          %form#create__message.create__message{:action => "/form.#", :method => "post"}
-            .input__box
-              %input#message__content.input__box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-              %label.input__box__image{:for => "message_image"}
-                %button.image__button{:type => "submit"}
-                  =link_to "/form.#", class: "my-black" do
-                    = icon("far", "image")
-                %input#message__image.input__box__image__file{:name => "message[image]", :type => "file"}/
-            %input.submit__btn{:name => "commit", :type => "submit", :value => "Send"}/
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            .form__mask
+              = f.label :image, class: 'form__mask__image' do
+                = fa_icon "image", class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'form__submit'
