@@ -13,7 +13,8 @@
           =link_to "/form.#" do
             .group__top__edit-btn Edit
           %p1 Members: seo neko
-        = render @messages
+        .messages
+          = render @messages
         .form
           = form_for [@group, @message] do |f|
             = f.text_field :content, class: 'form__message', placeholder: 'type a message'
