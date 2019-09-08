@@ -3,13 +3,6 @@
   background: $subWhiteColor;
 }
 
-// .group__created{
-//   background-color: $mainBlueColor;
-//   color: $mainWhiteColor;
-//   text-align: center;
-// }
-  
-
 .side__bar{
   width: 300px;
   background-color: #2f3e51;
@@ -104,34 +97,6 @@
       }
   }
   
-// .group__top{
-//   height: 100px;
-//   background-color: $subWhiteColor;
-//   border-bottom: solid 1px #eeeeee;
-//     &__title {
-//       font-size: 20px;
-//       color: #333333;
-//       padding: 35px 0px 15px 40px;
-//     }
-//     &__members {
-//       font-size: 12px;
-//       color: $subgrayColor;
-//       padding: 0px 0px 0px 40px;
-//     }
-//     &__edit-btn {
-//       height: 40px;
-//       color: $mainBlueColor;
-//       top: 28px;
-//       line-height: 40px;
-//       padding: 0px 20px;
-//       border: solid 1px $mainBlueColor;
-//       position: absolute;
-//       right: 40px;
-//     }
-// }
-
-
-
 .messages {
   background-color: #FAFAFA;
   box-sizing: border-box;
@@ -162,45 +127,6 @@
     }
   }
 }
-
-
-
-// .chat__posted{
-//   height: calc(100vh - 190px);
-//     &__top{
-//        height: 100px;
-//        background-color: $mainWhiteColor;
-//         .chat__posted__top__user{
-//            @include flex;
-//              .message__user{
-//                @include message_user;
-//              }
-//              .message__date{
-//                 @include message_date;
-//              }
-//         }
-//         .chat__message{
-//           @include chat_message;
-//         }
-//     }
-// }
-
-// .chat__middle{
-//   height: 100px;
-//   background-color: $mainWhiteColor;
-//      .chat__posted__top__user{
-//         @include flex;
-//            .message__user{
-//               @include message_user;
-//            }
-//            .message__date{
-//               @include message_date;
-//            }
-//      }
-//      .chat__message{
-//         @include chat_message;
-//      }
-//  }
 
  .form {
   background-color: #DDDDDD;

@@ -9,22 +9,3 @@
       %p.lower-message__content
         = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-
-
-
-
-
-
-
-
--# .chat__posted
--#   .chat__posted__top
--#     .chat__posted__top__user
--#       = message.user.name
--#     .chat__posted__top__date
--#       = message.created_at.strftime("%Y/%m/%d %H:%M")  
--#   .chat__middle
--#     - if message.content.present?
--#       %p.lower-message__content
--#         = message.content
--#     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
