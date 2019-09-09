@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
   
+  def index
+    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html { redirect_to new_group_path }
+      format.json
+    end
+  end
+
   def edit
   end
 
@@ -14,6 +22,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
+    # binding.pry
     params.require(:user).permit(:name, :email)
   end
 end

@@ -9,9 +9,12 @@
       = render 'shared/side_bar'
       .chat__body
         .group__top
-          %h3 sample
-          =link_to "/form.#" do
-            .group__top__edit-btn Edit
+          .group__top__name
+            = @group.name
+          -# %h3 = @group.name
+          = link_to 'Edit', edit_group_path(@group), class: "group__top__edit-btn"
+          -# =link_to "edit_group_path(@group)" do
+          -#   .group__top__edit-btn Edit
           %p1 Members: seo neko
         .messages
           = render @messages
