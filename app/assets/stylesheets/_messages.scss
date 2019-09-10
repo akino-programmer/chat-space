@@ -92,11 +92,13 @@
         right: 40px;
         text-decoration: none;
       }
+    &__members__list{
+      font-size: 12px;
+      color: $subgrayColor;
       p1{
-        font-size: 12px;
-        color: $subgrayColor;
         padding: 0px 0px 0px 40px;
       }
+    }
   }
   
 .messages {
