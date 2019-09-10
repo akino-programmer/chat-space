@@ -5,14 +5,16 @@
     %link{crossorigin: "anonymous", href: "https://use.fontawesome.com/releases/v5.0.13/css/all.css", integrity: "sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp",rel: "stylesheet"}/
   %body
     .wrapper
-      -# .group__created グループを作成しました
       = render 'shared/side_bar'
       .chat__body
         .group__top
-          %h3 sample
-          =link_to "/form.#" do
-            .group__top__edit-btn Edit
-          %p1 Members: seo neko
+          .group__top__name
+            = @group.name
+          = link_to 'Edit', edit_group_path(@group), class: "group__top__edit-btn"
+          .group__top__members__list
+            %p1 Members: 
+            - @group.users.each do |user|
+              = user.name
         .messages
           = render @messages
         .form
