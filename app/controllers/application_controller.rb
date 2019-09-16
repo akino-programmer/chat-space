@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   
   protected
   def after_sign_out_path_for(resource)
-    '/users/sign_in' # サインアウト後のリダイレクト先URL
+    new_user_session_path
   end
 
 
