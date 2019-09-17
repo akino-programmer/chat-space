@@ -68,4 +68,7 @@ gem 'mini_magick'
 gem 'jquery-ui-rails'
 gem 'pry-rails'
 gem 'jquery-rails', '4.3.1'
+group :production do
+  gem 'unicorn', '5.4.1'
+end
 
