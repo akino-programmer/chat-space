@@ -48,19 +48,20 @@
 .groups{
   height: calc(100vh - 100px);
   color: $mainWhiteColor;
+  padding: 20px 20px 0;
+  overflow: scroll;
      .group{
-       height: 100px;
-       &__name{
+       margin-bottom: 40px;
+         &__name{
            font-size: 15px;
            font-weight: bold;
            color: $subWhiteColor;
-           padding: 20px 0px 5px 20px;
+           padding: 0px 0px 5px 0px;
           }
           &__message{
            font-size: 11px;
            font-weight: bold;
            color: $subWhiteColor;
-           padding: 0px 0px 20px 20px;
           }
     }
 }
@@ -110,6 +111,7 @@
   .message {
     .upper-message {
       display: flex;
+      margin-bottom: 10px;
       &__user-name {
         color: #434a54;
         font-size: 16px;
