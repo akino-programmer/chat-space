@@ -6,7 +6,6 @@
 .side__bar{
   width: 300px;
   background-color: #2f3e51;
-  height: 100vh;  
   float: left;
   box-sizing: border-box;
   color: $mainWhiteColor;
@@ -69,14 +68,13 @@
 .chat__body{
   width: calc(100vw - 300px);
   background-color: $mainWhiteColor;
-  height: 100vh;
-  float: right;
-
+  float: left;
   .group__top{
     height: 100px;
     background-color: $subWhiteColor;
     border-bottom: solid 1px #eeeeee;
     position: relative;
+    overflow: scroll;
     &__name{
         font-size: 20px;
         color: #333333;
@@ -105,8 +103,8 @@
 .messages {
   background-color: #FAFAFA;
   box-sizing: border-box;
-  padding: 46px 40px 0;
-  height: calc(100% - 100px - 90px);
+  padding: 46px 40px;
+  height: calc(100vh - 190px);
   overflow: scroll;
   .message {
     .upper-message {
@@ -176,4 +174,7 @@
     cursor: pointer;
   }
 }
+}
+* {
+  box-sizing: border-box;
 }
